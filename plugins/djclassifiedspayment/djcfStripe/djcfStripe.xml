@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="djclassifiedspayment" method="upgrade">
+    <name>DJ Classifieds Stripe payment</name>
+    <author>Olivier Beaudet</author>
+    <creationDate>October 2014</creationDate>    
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>obeaudet@hotmail.com</authorEmail>
+    <version>1.0</version>
+    <description>DJ Classifieds Stripe payment</description>
+    <files>
+        <filename plugin="djcfStripe">djcfStripe.php</filename>
+        <folder>js</folder>
+        <folder>language</folder>
+        <folder>stripe</folder>        
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_djclassifiedspayment_djcfstripe.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="test_secret_key" type="text"                    
+                    default=""
+                    label="Test API secret Key"
+                    description="Test API secret Key"
+                />
+                <field name="test_publishable_key" type="text"
+                    default=""
+                    label="Test API publishable Key"
+                    description="Test API publishable Key"
+                />
+                <field name="live_secret_key" type="text"
+                    default=""
+                    label="Live API secret Key"
+                    description="Live API secret Key"
+                />
+                <field name="live_publishable_key" type="text"
+                    default=""
+                    label="Live API publishable Key"
+                    description="Live API publishable Key"
+                />
+                <field name="mode" type="radio"
+                    default="test"
+                    label="Mode"
+                    description="Test [sandbox] OR Live"
+                >
+                        <option value="test">Test</option>
+                        <option value="live">Live</option>
+                </field>
+                <field name="currency_code" type="text"
+                    size="10"
+                    default="usd"
+                    label="Currency Symbol"
+                    description="Currency Symbol"
+                />
+                <field name="enable_cvc" type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    description="CVC enable"
+                    label="CVC enable"
+                >
+                    <option value="1">JON</option>
+                    <option value="0">JOFF</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
