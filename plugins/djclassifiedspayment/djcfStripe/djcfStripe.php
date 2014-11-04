@@ -5,9 +5,7 @@
 * @subpackage	DJ Classifieds Payment Plugin
 * @copyright	Copyright (C) 2010 DJ-Extensions.com LTD, All rights reserved.
 * @license		http://www.gnu.org/licenses GNU/GPL
-* @autor url    http://design-joomla.eu
-* @autor email  contact@design-joomla.eu
-* @Developer    Lukasz Ciastek - lukasz.ciastek@design-joomla.eu 
+* @Developer    Olivier Beaudet
 * 
 * 
 * DJ Classifieds is free software: you can redistribute it and/or modify
@@ -48,10 +46,6 @@ class plgdjclassifiedspaymentdjcfStripe extends JPlugin
     public function plgdjclassifiedspaymentdjcfStripe(&$subject, $config)
     {
         parent::__construct($subject, $config);
-                
-//        $this->loadLanguage('plg_djcfStripe');
-        
-//        $params["plugin_name"] = "djcfStripe";
 
         //Set the configured stripe information
         $params["test_secret_key"]      = $this->params->get("test_secret_key");
